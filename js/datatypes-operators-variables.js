@@ -109,7 +109,10 @@ let password = 'notastrongpassword';
 let atLeast5 = password.length >= 5;
 let noUsername = !password.includes(username);
 let noMoreThan20 = username.length <= 20;
-let noWhitespace = (username[0] !== " " && username[-1] !== " " && password[0] !== " " && password[-1] !== " ");
+let noWhitespace = (username[0] !== " "
+    && username[-1] !== " "
+    && password[0] !== " "
+    && password[-1] !== " ");
 
 
 console.log(atLeast5);
