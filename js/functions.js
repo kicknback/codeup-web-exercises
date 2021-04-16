@@ -84,9 +84,9 @@
      * then display the dollar amount they should tip
      */
 
-    // let billTotal = prompt("Please enter your bill total.");
-    // let tipPercent = prompt("What percentage of tip would you like to add? (In decimal form)");
-    // alert("Kindly remit $" + calculateTip(tipPercent, billTotal) + " for the tip.");
+    let billTotal = prompt("Please enter your bill total.");
+    let tipPercent = prompt("What percentage of tip would you like to add? (In decimal form)");
+    alert("Kindly remit $" + calculateTip(tipPercent, billTotal) + " for the tip.");
 
     /**
      * TODO:
