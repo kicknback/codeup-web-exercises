@@ -1,1 +1,8 @@
-(function(){})()
+(function(){
+   "use strict";
+
+
+
+
+
+})()
