@@ -59,10 +59,8 @@
                 return "Blue is the color of the sky";
             case "red":
                 return "Strawberries are red";
-            case "cyan":
-                return "I don't know anything about cyan";
             default:
-                return "That is not one of the colors we talked about";
+                return "I don't know anything about " + colorStr;
         }
     }
 
@@ -132,8 +130,8 @@
 //     let userTotal = prompt("What was your total?");
 //
 //     alert("Your lucky number was: " + luckyNumber +
-//         "\nThe price before discount is: " + userTotal +
-//         "\nAnd your lucky number made your total out to be: " + calculateTotal(luckyNumber, userTotal));
+//         "\nThe price before discount is: $" + userTotal +
+//         "\nAnd your lucky number made your total out to be: $" + calculateTotal(luckyNumber, userTotal));
 
 
     /**
@@ -153,62 +151,22 @@
      * HINT: The way we prompt for a value could be improved
      */
 
-    // function userNum() {
-    //     let numPat = /\d+/gi;
-    //     let userNumber = confirm("Would you like to enter a number?");
-    //     if (userNumber) {
-    //         let enterNum = prompt("Input your desired number...");
-    //         if (numPat.test(enterNum)) {
-    //             if (enterNum % 2 === 0 || enterNum == 2) {
-    //                 alert("Your number is even");
-    //             } else {
-    //                 alert("Your number is odd");
-    //             }
-    //             alert("Adding 100 to your number for validation: " + (Number(enterNum) + 100));
-    //             if (enterNum < 0) {
-    //                 alert("Your number is a negative number");
-    //             } else {
-    //                 alert("Your number is a positive number");
-    //             }
-    //         } else {
-    //             alert("Sorry, but you did not enter a number");
-    //         }
-    //     } else {
-    //         alert("Fine, be like that then...");
-    //     }
-    // }
-
-    function checkIfEven(num) {
-        if (num % 2 === 0 || num === 2) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-    function checkIfPos(num) {
-        if (num > 0) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
     function userNum() {
         let numPat = /\d+/gi;
         let userNumber = confirm("Would you like to enter a number?");
         if (userNumber) {
             let enterNum = prompt("Input your desired number...");
             if (numPat.test(enterNum)) {
-                if (checkIfEven(enterNum) === true) {
+                if (enterNum % 2 === 0 || enterNum == 2) {
                     alert("Your number is even");
                 } else {
                     alert("Your number is odd");
                 }
                 alert("Adding 100 to your number for validation: " + (Number(enterNum) + 100));
-                if (checkIfPos(enterNum)) {
-                    alert("Your number is a positive number");
-                } else {
+                if (enterNum < 0) {
                     alert("Your number is a negative number");
+                } else {
+                    alert("Your number is a positive number");
                 }
             } else {
                 alert("Sorry, but you did not enter a number");
@@ -217,6 +175,46 @@
             alert("Fine, be like that then...");
         }
     }
+
+    // function checkIfEven(num) {
+    //     if (num % 2 === 0 || num === 2) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+    // function checkIfPos(num) {
+    //     if (num > 0) {
+    //         return true;
+    //     } else {
+    //         return false;
+    //     }
+    // }
+    //
+    // function userNum() {
+    //     let numPat = /\d+/gi;
+    //     let userNumber = confirm("Would you like to enter a number?");
+    //     if (userNumber) {
+    //         let enterNum = prompt("Input your desired number...");
+    //         if (numPat.test(enterNum)) {
+    //             if (checkIfEven(enterNum) === true) {
+    //                 alert("Your number is even");
+    //             } else {
+    //                 alert("Your number is odd");
+    //             }
+    //             alert("Adding 100 to your number for validation: " + (Number(enterNum) + 100));
+    //             if (checkIfPos(enterNum)) {
+    //                 alert("Your number is a positive number");
+    //             } else {
+    //                 alert("Your number is a negative number");
+    //             }
+    //         } else {
+    //             alert("Sorry, but you did not enter a number");
+    //         }
+    //     } else {
+    //         alert("Fine, be like that then...");
+    //     }
+    // }
 
     userNum();
 })()
