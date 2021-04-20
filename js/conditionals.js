@@ -26,12 +26,11 @@
     //         return "Blue is the color of the sky";
     //     } else if (colorStr === "red") {
     //         return "Strawberries are red";
-    //     } else if (colorStr === "cyan") {
-    //         return "I don't know anything about cyan";
     //     } else {
-    //         return "That is not one of the colors we talked about";
+    //         return "I don't know anything about " + colorStr;
     //     }
     // }
+    console.log(analyzeColor("blue"));
 
 // Don't change the next two lines!
 // These lines create two variables for you:
