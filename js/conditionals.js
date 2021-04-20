@@ -58,13 +58,10 @@
         switch (colorStr) {
             case "blue":
                 return "Blue is the color of the sky";
-                break;
             case "red":
                 return "Strawberries are red";
-                break;
             case "cyan":
                 return "I don't know anything about cyan";
-                break;
             default:
                 return "That is not one of the colors we talked about";
         }
@@ -221,7 +218,6 @@
             alert("Fine, be like that then...");
         }
     }
-
 
     userNum();
 })()
