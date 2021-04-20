@@ -157,22 +157,62 @@
      * HINT: The way we prompt for a value could be improved
      */
 
+    // function userNum() {
+    //     let numPat = /\d+/gi;
+    //     let userNumber = confirm("Would you like to enter a number?");
+    //     if (userNumber) {
+    //         let enterNum = prompt("Input your desired number...");
+    //         if (numPat.test(enterNum)) {
+    //             if (enterNum % 2 === 0 || enterNum == 2) {
+    //                 alert("Your number is even");
+    //             } else {
+    //                 alert("Your number is odd");
+    //             }
+    //             alert("Adding 100 to your number for validation: " + (Number(enterNum) + 100));
+    //             if (enterNum < 0) {
+    //                 alert("Your number is a negative number");
+    //             } else {
+    //                 alert("Your number is a positive number");
+    //             }
+    //         } else {
+    //             alert("Sorry, but you did not enter a number");
+    //         }
+    //     } else {
+    //         alert("Fine, be like that then...");
+    //     }
+    // }
+
+    function checkIfEven(num) {
+        if (num % 2 === 0 || num === 2) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    function checkIfPos(num) {
+        if (num > 0) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     function userNum() {
         let numPat = /\d+/gi;
         let userNumber = confirm("Would you like to enter a number?");
         if (userNumber) {
             let enterNum = prompt("Input your desired number...");
             if (numPat.test(enterNum)) {
-                if (enterNum % 2 === 0 || enterNum == 2) {
+                if (checkIfEven(enterNum) === true) {
                     alert("Your number is even");
                 } else {
                     alert("Your number is odd");
                 }
                 alert("Adding 100 to your number for validation: " + (Number(enterNum) + 100));
-                if (enterNum < 0) {
-                    alert("Your number is a negative number");
-                } else {
+                if (checkIfPos(enterNum)) {
                     alert("Your number is a positive number");
+                } else {
+                    alert("Your number is a negative number");
                 }
             } else {
                 alert("Sorry, but you did not enter a number");
@@ -181,6 +221,7 @@
             alert("Fine, be like that then...");
         }
     }
+
 
     userNum();
 })()
