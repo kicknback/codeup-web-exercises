@@ -157,7 +157,7 @@
         if (userNumber) {
             let enterNum = prompt("Input your desired number...");
             if (numPat.test(enterNum)) {
-                if (enterNum % 2 === 0 || enterNum == 2) {
+                if (enterNum % 2 === 0 || enterNum === 2) {
                     alert("Your number is even");
                 } else {
                     alert("Your number is odd");
