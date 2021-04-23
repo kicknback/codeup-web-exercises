@@ -10,7 +10,7 @@
         }
     }
 
-    //console.log(showMultiplicationTable(11));
+    showMultiplicationTable(9);
 
     //let ranNum = Math.floor(Math.random() * (200 - 20)) + 20;
     //console.log(ranNum);
@@ -24,12 +24,15 @@
     //     }
     // }
 
+    // for (let i = 1; i <= 9; i++) {
+    //     console.log((i.toString().repeat(i)));
+    // }
 
 
+    // for (let i = 100; i > 0; i-=5) {
+    //     console.log(i);
+    // }
 
-    for (let i = 100; i > 0; i-=5) {
-        console.log(i);
-    }
 
 
 

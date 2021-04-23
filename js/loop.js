@@ -79,16 +79,16 @@
     //  If it's neither print "I'm not playing"
     //  Print "marco polo" if it's divisible by 3 and 5.
 
-    for (let i = 1; i <= 40; i++) {
-        if (i % 3 === 0 && i % 5 === 0) {
-            console.log("Marco Polo");
-        } else if (i % 3 === 0) {
-            console.log("Marco");
-        } else if (i % 5 === 0) {
-            console.log("Polo");
-        } else {
-            console.log("I'm not playing");
-        }
-    }
+    // for (let i = 1; i <= 40; i++) {
+    //     if (i % 3 === 0 && i % 5 === 0) {
+    //         console.log("Marco Polo");
+    //     } else if (i % 3 === 0) {
+    //         console.log("Marco");
+    //     } else if (i % 5 === 0) {
+    //         console.log("Polo");
+    //     } else {
+    //         console.log("I'm not playing");
+    //     }
+    // }
 
 })()
