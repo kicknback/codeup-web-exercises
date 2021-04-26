@@ -7,7 +7,7 @@
      * 'names'.
      */
 
-
+    let names = ["Josh", "Billy", "Bob", "Dj"];
 
     /**
      * TODO:
@@ -15,11 +15,15 @@
      * array.
      */
 
+    console.log(names.length);
+
     /**
      * TODO:
      * Create log statements that will print each of the names individually by
      * accessing each element's index.
      */
+
+    // combining with the below to-do..
 
     /**
      * TODO:
@@ -27,10 +31,18 @@
      * array.
      */
 
+    for (let i = 0; i < names.length; i++) {
+        console.log(names[i]);
+    }
+
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
+
+    names.forEach(function(name) {
+        console.log(`My friend's name is ${name}`);
+    })
 
     /**
      * TODO:
@@ -45,5 +57,22 @@
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+
+    function first(arr) {
+        return arr[0];
+    }
+    function second(arr) {
+        return arr[1];
+    }
+    function last(arr) {
+        return arr[arr.length - 1];
+    }
+
+    let numArr = [1, 2, 3, 4, 5];
+
+    console.log(first(numArr));
+    console.log(second(numArr));
+    console.log(last(numArr));
+
 
 })();
