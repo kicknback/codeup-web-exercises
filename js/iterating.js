@@ -15,7 +15,7 @@
      * array.
      */
 
-    console.log(names.length);
+    // console.log(names.length);
 
     /**
      * TODO:
@@ -31,18 +31,18 @@
      * array.
      */
 
-    for (let i = 0; i < names.length; i++) {
-        console.log(names[i]);
-    }
+    // for (let i = 0; i < names.length; i++) {
+    //     console.log(names[i]);
+    // }
 
     /**
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
 
-    names.forEach(function(name) {
-        console.log(`My friend's name is ${name}`);
-    })
+    // names.forEach(function(name) {
+    //     console.log(`My friend's name is ${name}`);
+    // })
 
     /**
      * TODO:
@@ -58,21 +58,41 @@
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
 
-    function first(arr) {
-        return arr[0];
-    }
-    function second(arr) {
-        return arr[1];
-    }
-    function last(arr) {
-        return arr[arr.length - 1];
-    }
+    // function first(arr) {
+    //     return arr[0];
+    // }
+    // function second(arr) {
+    //     return arr[1];
+    // }
+    // function last(arr) {
+    //     return arr[arr.length - 1];
+    // }
+    //
+    // let numArr = [1, 2, 3, 4, 5];
+    //
+    // console.log(first(numArr));
+    // console.log(second(numArr));
+    // console.log(last(numArr));
 
-    let numArr = [1, 2, 3, 4, 5];
+    // -------------- manipulating arrays
 
-    console.log(first(numArr));
-    console.log(second(numArr));
-    console.log(last(numArr));
+    // TODO: MINI-EXERCISE
+    //  -> var days = ["Monday", "Tuesday", "Wednesday"];
+    //  -> Create an array with the remaining days of the week
+    //  -> Call .forEach() on that NEW array
+    //  -> Inside the inline function you pass into .forEach():
+    //      -> add the remainingDay of the week to the old array
+    //  -> When the loop completes, console.log() the completed day of the week array
+
+    var days = ["Monday", "Tuesday", "Wednesday"];
+    let otherDays = ["Thursday", "Friday", "Saturday", "Sunday"];
+    console.log(days);
+
+    otherDays.forEach(function(day) {
+        days.push(day);
+    })
+
+    console.log(days);
 
 
 })();
