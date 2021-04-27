@@ -165,6 +165,9 @@
         isOpen: true,
         ranking: "The best",
         yearOpened: 1801,
+        makeASound: function(animalObj) {
+           return animalObj.animalSound;
+        },
         animals: {
             zebra: {
                 hasFur: true,
@@ -174,7 +177,8 @@
                 livingPlace: "Africa",
                 hearTheSound: function() {
                     return this.animalSound;
-                }
+                },
+                //testingSound: this.makeASound(this.animals.zebra)
             },
             eagle: {
                 hasFur: false,
@@ -219,6 +223,8 @@
         }
     }
 
-    console.log(randomZoo.animals.eagle.hearTheSound());
+    console.log(randomZoo.makeASound(randomZoo.animals.zebra));
+    //console.log(randomZoo.animals.zebra.testingSound);
+    //console.log(randomZoo.animals.eagle.hearTheSound());
 
 })()
