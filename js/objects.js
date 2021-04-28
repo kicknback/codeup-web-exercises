@@ -81,7 +81,43 @@
      * > console.log(books[0].author.lastName) // "Adams"
      */
 
-
+    // let books = [
+    //     {
+    //         title: "Shogun",
+    //         author: {
+    //             firstName: "James",
+    //             lastName: "Clavell"
+    //         }
+    //     },
+    //     {
+    //         title: "The gift of fear",
+    //         author: {
+    //             firstName: "Gavin",
+    //             lastName: "de Becker"
+    //         }
+    //     },
+    //     {
+    //         title: "All quiet on the western front",
+    //         author: {
+    //             firstName: "Erich",
+    //             lastName: "Remarque"
+    //         }
+    //     },
+    //     {
+    //         title: "Fahrenheit 451",
+    //         author: {
+    //             firstName: "Ray",
+    //             lastName: "Bradbury"
+    //         }
+    //     },
+    //     {
+    //         title: "Starship Troopers",
+    //         author: {
+    //             firstName: "Robert",
+    //             lastName: "Heinlein"
+    //         }
+    //     }
+    // ];
 
     /**
      * TODO:
@@ -108,6 +144,10 @@
      *      ...
      */
 
+    // books.forEach(function(book, index) {
+    //     console.log(`Book # ${index + 1}\nTitle: ${book.title}\nAuthor: ${book.author.firstName} ${book.author.lastName}\n---`);
+    // });
+
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -118,5 +158,33 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+    function createBook(title, firstName, lastName) {
+        return {
+            title: title,
+            author: {
+                firstName: firstName,
+                lastName: lastName
+            }
+        }
+    }
+
+    let books = [
+        createBook("Shogun", "James", "Clavell"),
+        createBook("The gift of fear", "Gavin", "de Becker"),
+        createBook("All quiet on the western front", "Erich", "Remarque"),
+        createBook("Fahrenheit 451", "Ray", "Bradbury"),
+        createBook("Starship Troopers", "Robert", "Heinlein")
+    ];
+
+    //console.log(books);
+
+    function showBookInfo(bookObj, bookNum) {
+        console.log(`Book # ${bookNum + 1}\nTitle: ${bookObj.title}\nAuthor: ${bookObj.author.firstName} ${bookObj.author.lastName}\n---`);
+    }
+
+    books.forEach(function (book, index) {
+        showBookInfo(book, index);
+    });
 
 })();
