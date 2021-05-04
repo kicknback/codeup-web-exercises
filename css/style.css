@@ -1,3 +1,40 @@
 .fancy-header {
-    color: purple;
+    text-align: center;
+}
+
+h1, h2 {
+    color: chartreuse;
+    text-decoration: underline;
+}
+
+* {
+    background-color: bisque;
+
+}
+
+body {
+    background-image: url("../images/cool-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: "Apple Chancery", "serif", "fantasy";
+}
+
+ul > li {
+    list-style: georgian;
+}
+
+table {
+    width: 25%;
+}
+
+table, th, td {
+    border: 2px dot-dash blue;
+}
+
+a:hover {
+    color: darkorchid;
+}
+
+a:active {
+    color: aquamarine;
 }
