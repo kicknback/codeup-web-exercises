@@ -15,6 +15,7 @@
 
     console.log(cube(3));
     console.log(cubeRoot(27));
+    console.log(cubeRoot(cube(3)));
 
     //-----------------------------
 
