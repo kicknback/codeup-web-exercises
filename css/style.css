@@ -7,11 +7,6 @@ h1, h2 {
     text-decoration: underline;
 }
 
-* {
-    background-color: bisque;
-
-}
-
 body {
     background-image: url("../images/cool-background.png");
     background-repeat: no-repeat;
