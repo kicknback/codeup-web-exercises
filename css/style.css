@@ -14,6 +14,16 @@ body {
     font-family: "Apple Chancery", "serif", "fantasy";
 }
 
+#images {
+    border: 5px solid #290238;
+    padding: 10px;
+    position: center;
+    margin: 10em;
+}
+.image {
+    position: relative;
+}
+
 ul > li {
     list-style: georgian;
 }
