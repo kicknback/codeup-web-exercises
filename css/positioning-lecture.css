@@ -14,15 +14,24 @@ TODO: notice in the html that we have
     position: fixed;
     z-index: 1;
     border-radius: 5px;
+    width: 100%;
+    margin: auto;
+    top: 10px;
+    background-image: url("https://mazzymike.files.wordpress.com/2011/02/navbar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     /*display: inline-block;*/
 }
+/*#img {*/
+/*    position: absolute;*/
+/*}*/
 a:hover {
     font-weight: bold;
     font-style: italic;
 }
 
 header {
-    background-color : lightskyblue;
+    /*background-color : lightskyblue;*/
     padding          : 2%;
     position         : fixed;
     width            : 100%;
