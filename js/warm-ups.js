@@ -23,6 +23,7 @@
 
     //console.log(last("fkvnseilrgheiurghsklhv"));
 
+    //------------------------------
 
     let remainder = (number, divisor) => {
         if (!parseInt(number)) {
@@ -35,5 +36,7 @@
     }
 
     console.log(remainder("84", 9));
+
+    //------------------------------
 
 })()
