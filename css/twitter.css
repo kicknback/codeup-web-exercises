@@ -97,6 +97,7 @@ a {
 .container {
     display: flex;
     margin: 2em;
+    /*flex-direction: column;*/
 }
 .media {
     width: 100%;
@@ -105,14 +106,16 @@ a {
     border-bottom-color: var(--separator-color);
     padding: .5em;
     overflow: scroll;
+    display: inline-block;
 }
 .media-image {
     max-width: 50px;
-    display: flex;
+    /*display: flex;*/
     margin-top: 1.33em;
+    display: inline-block;
 }
 .media-body {
-    width: 100%;
+    /*width: 100%;*/
     display: inline-block;
 }
 .profile-items {
