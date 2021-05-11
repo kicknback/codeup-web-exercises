@@ -1,4 +1,4 @@
-@media screen and (min-width:365px){
+@media screen and (min-width:365px) and (max-width: 900px){
     body{
         display: flex;
         flex-direction: column;
@@ -65,12 +65,19 @@
         align-items: center;
     }
 }
-@media screen and (min-width:992px) {
+@media screen and (min-width:934px) {
     .hidden-on-desktop {
         display: none;
     }
     body {
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .nav-links {
+        list-style: none;
+        /*justify-content: right;*/
+    }
+    .nav {
+        justify-content: right;
     }
 }
