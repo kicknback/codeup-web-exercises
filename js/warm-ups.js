@@ -35,8 +35,27 @@
         }
     }
 
-    console.log(remainder("84", 9));
+    //console.log(remainder("84", 9));
 
     //------------------------------
+
+    let pyra = () => {
+        let starStr = "*";
+        for (let i = 0; i <= 4; i++) {
+            console.log(starStr);
+            for (let j = 0; j <= 1; j++) {
+                starStr += "*";
+            }
+        }
+    }
+
+    pyra();
+
+
+
+
+
+
+
 
 })()
