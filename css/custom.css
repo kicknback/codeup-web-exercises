@@ -11,10 +11,15 @@ select {
     color: white;
     background-color: #037bff;
 }
+.card-body {
+    padding-bottom: -20px;
+}
 .card-footer {
     justify-content: right;
 }
-
+/*.card-body {*/
+/*    margin-bottom: -30px;*/
+/*}*/
 .jumbotron {
     background-image: url("../images/pizza.png");
     display: flex;
@@ -27,9 +32,3 @@ select {
 #pizzaCon {
     padding: 0;
 }
-/*#num1 {*/
-/*    color: white;*/
-/*    background-color: grey;*/
-/*    background-size: 1px;*/
-/*    border-radius: 50%;*/
-/*}*/
