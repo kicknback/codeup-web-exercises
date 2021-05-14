@@ -14,10 +14,6 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Pizza World</a>
-<!--            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">-->
-<!--                <span class="navbar-toggler-icon"></span>-->
-<!--            </button>-->
-
             <div class="container-fluid">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
@@ -41,7 +37,7 @@
         </nav>
         <div class="container">
             <div class="jumbotron jumbotron-fluid d-none d-md-block">
-                <div class="container">
+                <div class="container" id="pizzaCon">
                     <h1 class="display-4 pizza-title">Welcome to Pizza World!</h1>
                 </div>
             </div>
@@ -49,16 +45,37 @@
             <hr>
             <ul class="nav nav-tabs" role="tablist">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fas fa-meteor"></i>Size and crust</a>
+                    <a class="nav-link" href="#"><span class="badge badge-primary badge-pill">1</span> Size and crust</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><span class="badge badge-primary badge-pill">2</span>Cheese and sauce</a>
+                    <a class="nav-link" href="#"><span class="badge badge-primary badge-pill">2</span> Cheese and sauce</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Toppings</a>
+                    <a class="nav-link" href="#"><span class="badge badge-primary badge-pill">3</span> Toppings</a>
                 </li>
             </ul>
-            <div class="card">
+            <div class="card crust">
+                <h5 class="card-header">Choose size and crust</h5>
+                <div class="card-body">
+                    <h5 class="card-header">Hand Tossed</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Garlic seasoned crust with a rich, buttery taste.</li>
+                        <li class="list-group-item"><input type="radio" name="hand"> Small (10")</li>
+                        <li class="list-group-item"><input type="radio" name="hand"> Medium (12")</li>
+                    </ul>
+                </div>
+                <br>
+                <div class="card-body">
+                    <h5 class="card-header">Crispy Thin</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item">Thin enough for optimum crispy to crunchy ratio.</li>
+                        <li class="list-group-item"><input type="radio" name="thin"> Medium (12")</li>
+                        <li class="list-group-item"><input type="radio" name="thin"> Large (14")</li>
+                    </ul>
+                </div>
+                <br>
+
+
 
             </div>
         </div>

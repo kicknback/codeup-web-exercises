@@ -1,3 +1,10 @@
+.crust:nth-child(1) {
+
+}
+.card-header {
+    color: 037BFF;
+}
+
 .jumbotron {
     background-image: url("../images/pizza.png");
     display: flex;
@@ -12,9 +19,12 @@ h1 {
     width: 100%;
     margin: 0;
 }
-#num1 {
-    color: white;
-    background-color: grey;
-    background-size: 1px;
-    border-radius: 50%;
+#pizzaCon {
+    padding: 0;
 }
+/*#num1 {*/
+/*    color: white;*/
+/*    background-color: grey;*/
+/*    background-size: 1px;*/
+/*    border-radius: 50%;*/
+/*}*/
