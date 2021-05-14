@@ -1,8 +1,9 @@
 .crust:nth-child(1) {
 
 }
-.card-header {
-    color: 037BFF;
+.crust {
+    color: white;
+    background-color: #037bff;
 }
 
 .jumbotron {
