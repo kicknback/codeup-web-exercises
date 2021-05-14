@@ -1,9 +1,10 @@
-.crust:nth-child(1) {
 
-}
 .crust {
     color: white;
     background-color: #037bff;
+}
+.card-footer {
+    justify-content: right;
 }
 
 .jumbotron {
