@@ -1,4 +1,12 @@
-
+h1 {
+    background-color: white;
+    opacity: 60%;
+    width: 100%;
+    margin: 0;
+}
+select {
+    margin-top: 1em;
+}
 .crust {
     color: white;
     background-color: #037bff;
@@ -15,12 +23,7 @@
     text-align: center;
     opacity: 60%;
 }
-h1 {
-    background-color: white;
-    opacity: 60%;
-    width: 100%;
-    margin: 0;
-}
+
 #pizzaCon {
     padding: 0;
 }
