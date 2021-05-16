@@ -43,19 +43,19 @@
             </div>
             <h2>Build your own pizza!</h2>
             <hr>
-            <ul class="nav nav-tabs" role="tablist" id="tab-list">
-                <li class="nav-item" data-toggle="tab" role="presentation">
-                    <a class="nav-link" href="#crust" id="crust-tab" role="tab" aria-controls="crust" aria-selected="true"><span class="badge badge-primary badge-pill bg-secondary">1</span> Size and crust</a>
+            <ul class="nav nav-tabs" role="tablist" id="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" data-toggle="tab" href="#crust" id="crust-tab" role="tab" aria-controls="crust" aria-selected="true"><span class="badge badge-primary badge-pill bg-secondary">1</span> Size and crust</a>
                 </li>
-                <li class="nav-item" data-toggle="tab" role="presentation">
-                    <a class="nav-link active" href="#cheese" id="cheese-tab" role="tab" aria-controls="cheese" aria-selected="false"><span class="badge badge-primary badge-pill bg-secondary">2</span> Cheese and sauce</a>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="tab" href="#cheese" id="cheese-tab" role="tab" aria-controls="cheese" aria-selected="false"><span class="badge badge-primary badge-pill bg-secondary">2</span> Cheese and sauce</a>
                 </li>
-                <li class="nav-item" data-toggle="tab" role="presentation">
-                    <a class="nav-link" href="#toppings" id="toppings-tab" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-primary badge-pill bg-secondary">3</span> Toppings</a>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" data-toggle="tab" href="#toppings" id="toppings-tab" role="tab" aria-controls="toppings" aria-selected="false"><span class="badge badge-primary badge-pill bg-secondary">3</span> Toppings</a>
                 </li>
             </ul>
             <div class="tab-content" id="pizza-tabs">
-                <div class="card tab-pane fade" id="crust" role="tabpanel" aria-labelledby="crust-tab">
+                <div class="card tab-pane fade show active" id="crust" role="tabpanel" aria-labelledby="crust-tab">
                     <h5 class="card-header crust">Choose size and crust</h5>
                     <div class="card-body">
                         <h5 class="card-header">Hand Tossed</h5>
@@ -79,7 +79,7 @@
                 </div>
 
 
-                <div class="card tab-pane fade show active" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">
+                <div class="card tab-pane fade" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">
                     <h5 class="card-header crust">Choose Cheese and Sauce</h5>
                     <div class="card-body">
                         <h5 class="card-header">Cheese</h5>
@@ -154,7 +154,7 @@
                 </div>
             </div>
         </div>
-
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     </body>
 </html>
