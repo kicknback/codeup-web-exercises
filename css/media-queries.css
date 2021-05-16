@@ -66,12 +66,17 @@
     }
 }
 @media screen and (min-width:934px) {
-    .hidden-on-desktop {
-        display: none;
-    }
     body {
         display: flex;
-        flex-wrap: wrap;
+        /*flex-wrap: wrap;*/
+        align-content: space-around;
+    }
+    footer {
+        align-self: flex-end;
+        order: 6;
+    }
+    .hidden-on-desktop {
+        display: none;
     }
     .nav-links {
         list-style: none;
@@ -79,5 +84,11 @@
     }
     .nav {
         justify-content: right;
+    }
+    .main {
+        align-self: flex-end;
+    }
+    .sub-section {
+        align-self: flex-end-end;
     }
 }
