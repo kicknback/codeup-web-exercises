@@ -4,7 +4,6 @@
         flex-direction: column;
         align-items: stretch;
         justify-content: space-between;
-        /*margin: 0 auto;*/
     }
     .alert-info{
         background-color: lightblue;
@@ -47,7 +46,6 @@
     .header-img {
         width: 100%;
         align-items: center;
-        /*height: 50px;*/
     }
     .header-img img {
         width: 100%;
@@ -71,8 +69,6 @@
         flex-direction: row;
         flex-wrap: wrap;
         position: relative;
-        /*height: 100vh;*/
-        /*max-width: 1200px;*/
         justify-items: center;
     }
     footer {
@@ -86,9 +82,14 @@
     img {
         width: 100%;
     }
+    li {
+        display: inline-block;
+        clear: both;
+    }
     nav {
         width: 50%;
-        display: inline;
+        display: block;
+        vertical-align: center;
     }
     .hidden-on-desktop {
         display: none;
@@ -100,11 +101,7 @@
     }
     .nav-links {
         list-style-type: none;
-        display: inline;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-        /*justify-content: right;*/
+        text-align: center;
     }
     .main {
         width: 60%;
