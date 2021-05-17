@@ -1,4 +1,4 @@
-@media screen and (min-width:365px) and (max-width: 900px){
+@media screen and (max-width: 933px){
     body{
         display: flex;
         flex-direction: column;
@@ -68,27 +68,50 @@
 @media screen and (min-width:934px) {
     body {
         display: flex;
-        /*flex-wrap: wrap;*/
-        align-content: space-around;
+        flex-direction: row;
+        flex-wrap: wrap;
+        position: relative;
+        /*height: 100vh;*/
+        /*max-width: 1200px;*/
+        justify-items: center;
     }
     footer {
         align-self: flex-end;
-        order: 6;
+        bottom: 0;
+        position: absolute;
+    }
+    h1 {
+        width: 50%;
+    }
+    img {
+        width: 100%;
+    }
+    nav {
+        width: 50%;
+        display: inline;
     }
     .hidden-on-desktop {
         display: none;
     }
+    .header-img {
+        display: flex;
+        justify-content: center;
+        align-self: stretch;
+    }
     .nav-links {
-        list-style: none;
+        list-style-type: none;
+        display: inline;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
         /*justify-content: right;*/
     }
-    .nav {
-        justify-content: right;
-    }
     .main {
-        align-self: flex-end;
+        width: 60%;
+        padding-right: 10px;
+        box-sizing: border-box;
     }
     .sub-section {
-        align-self: flex-end-end;
+        width: 40%;
     }
 }
