@@ -49,10 +49,19 @@
         }
     }
 
-    pyra();
+    //pyra();
 
+    //--------------------------------
 
-
+    const myArr = [1, 4, 'oihnw', true, 90, {}, "oiwhdfo"];
+    let secondToLast = arr => {
+        if (Array.isArray(arr)) {
+            return typeof arr[arr.length - 2];
+        } else {
+            return "Not an array input...";
+        }
+    }
+    console.log(secondToLast(myArr));
 
 
 
