@@ -1,0 +1,11 @@
+.border {
+    border: solid 1px;
+    margin: 5px;
+    padding: 3px;
+}
+.dark-green {
+    color: darkgreen;
+}
+#red-border {
+    border: red;
+}
