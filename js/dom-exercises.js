@@ -59,8 +59,10 @@
     items[3].innerText = "Cous Cous";
     items[4].innerText = "Bread";
 
+    innerDiv[3].innerHTML = newElement.innerHTML;
 
-
-
+    let childLis = innerDiv[3].getElementsByTagName("li");  //removeChild(items[4]);
+    let delChild = childLis[4];
+    innerDiv[3].removeChild(delChild);
 
 })()
