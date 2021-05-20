@@ -90,6 +90,54 @@
                 // subParagraphs[0].innerText = "Mission Accomplished!";
 
 
+                // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+
+                let allBtns = document.getElementsByClassName("task-btns");
+                console.log(allBtns);
+
+                let changeHeader = () => {
+                    mainHeader.innerText = "Javascript is Cool";
+                    console.log("%cHeader should be changed", "color: green");
+                }
+                let changeSubHeader = () => {
+                    subHeader.style.color = "blue";
+                    console.log("%cSub header should be altered", "color: yellow");
+                }
+                let changeItems = () => {
+                    for (let i = 0; i < listItems.length; i++) {
+                        if (i % 2 === 0) {
+                            listItems[i].style.color = "grey";
+                        }
+                    }
+                    listItems[0].style.color = "blue";
+                    console.log("%cList items should be altered", "color: cyan");
+                }
+                let changeSubpara = () => {
+                    subParagraphs[0].innerText = "Mission Accomplished!";
+                    console.log("%cSub paragraph should be different", "color: blue");
+                }
+
+
+                let buttonListeners = () => {
+                    for (let i = 0; i <= allBtns.length; i++) {
+                        if (i === 1) {
+                            allBtns[0].addEventListener("click", changeHeader);
+                        }
+                        if (i === 2) {
+                            allBtns[1].addEventListener("click", changeSubHeader);
+                        }
+                        if (i === 3) {
+                            allBtns[2].addEventListener("click", changeItems);
+                        }
+                        if (i === 4) {
+                            console.log(i);
+                            allBtns[3].addEventListener("click", changeSubpara);
+                        }
+                    }
+                }
+
+                buttonListeners();
 
 
             })();
