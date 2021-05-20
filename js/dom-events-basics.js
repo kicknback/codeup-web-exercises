@@ -88,7 +88,6 @@ let addEvent = () => {
 
 }
 
-
 let setAlert = () => {
     alert("Omg, you searched for something!");
 }
