@@ -30,24 +30,24 @@
             pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
             culpa qui officia deserunt mollit anim id est laborum.
         </p>
-        <div class="container border border-3 rounded bg-dark" style="margin-top: 100px">
-            <div class="row rounded mx-3 my-3 px-3 justify-content-between">
-                <div class="col-5 d-flex justify-content-center bg-secondary">
-                    <button class="task-btns text-align-center text-primary border bg-light">Task 1</button>
-                </div>
-                <div class="col-5 d-flex justify-content-center bg-secondary">
-                    <button class="task-btns text-align-center text-secondary border bg-light">Task 2</button>
-                </div>
-            </div>
-            <div class="row rounded mx-3 my-3 px-3 justify-content-between">
-                <div class="col-5 d-flex justify-content-center bg-secondary">
-                    <button class="task-btns text-align-center text-warning border bg-light">Task 3</button>
-                </div>
-                <div class="col-5 d-flex justify-content-center bg-secondary">
-                    <button class="task-btns text-align-center text-success border bg-light">Task 4</button>
-                </div>
-            </div>
-        </div>
+        <!--        <div class="container border border-3 rounded bg-dark" style="margin-top: 100px">-->
+        <!--            <div class="row rounded mx-3 my-3 px-3 justify-content-between">-->
+        <!--                <div class="col-5 d-flex justify-content-center bg-secondary rounded">-->
+        <!--                    <button class="task-btns text-align-center text-primary border bg-light rounded">Task 1</button>-->
+        <!--                </div>-->
+        <!--                <div class="col-5 d-flex justify-content-center bg-secondary rounded">-->
+        <!--                    <button class="task-btns text-align-center text-secondary border bg-light rounded">Task 2</button>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--            <div class="row rounded mx-3 my-3 px-3 justify-content-between">-->
+        <!--                <div class="col-5 d-flex justify-content-center bg-secondary rounded">-->
+        <!--                    <button class="task-btns text-align-center text-warning border bg-light rounded">Task 3</button>-->
+        <!--                </div>-->
+        <!--                <div class="col-5 d-flex justify-content-center bg-secondary rounded">-->
+        <!--                    <button class="task-btns text-align-center text-success border bg-light rounded">Task 4</button>-->
+        <!--                </div>-->
+        <!--            </div>-->
+        <!--        </div>-->
 
         <script>
             (function () {
@@ -91,6 +91,32 @@
 
 
                 // -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+
+                let newDiv = () => {
+                    let newEle = document.createElement("div");
+                    newEle.setAttribute("class", "container border border-3 rounded bg-dark");
+                    newEle.setAttribute("style", "margin-top: 100px");
+                    newEle.innerHTML = `
+                    <div class="row rounded mx-3 my-3 px-3 justify-content-between">
+                        <div class="col-5 d-flex justify-content-center bg-secondary rounded">
+                            <button class="task-btns text-align-center text-primary border bg-light rounded">Task 1</button>
+                        </div>
+                        <div class="col-5 d-flex justify-content-center bg-secondary rounded">
+                            <button class="task-btns text-align-center text-secondary border bg-light rounded">Task 2</button>
+                        </div>
+                    </div>
+                    <div class="row rounded mx-3 my-3 px-3 justify-content-between">
+                        <div class="col-5 d-flex justify-content-center bg-secondary rounded">
+                            <button class="task-btns text-align-center text-warning border bg-light rounded">Task 3</button>
+                        </div>
+                        <div class="col-5 d-flex justify-content-center bg-secondary rounded">
+                            <button class="task-btns text-align-center text-success border bg-light rounded">Task 4</button>
+                        </div>
+                    </div>`;
+                    return newEle;
+                }
+
+                document.body.appendChild(newDiv());
 
 
                 let allBtns = document.getElementsByClassName("task-btns");
