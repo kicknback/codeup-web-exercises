@@ -15,7 +15,6 @@ function addPost() {
     } else {
         alert("Please do not leave blank. Input your post");
     }
-
 }
 
 addButtonEvent();
