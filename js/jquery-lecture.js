@@ -10,4 +10,17 @@
     $("span").hide();
     $(".show-me").show();
 
+    // selecting children elements
+    $("body").children();
+
+    $(".pink").css("background-color", "pink");
+    $(".orange").css("background-color", "orange");
+    window.onload = function() {
+        $(".pink").hide();
+    }
+    $(document).ready(function(){
+        $(".orange").hide();
+    })
+
+
 })()
