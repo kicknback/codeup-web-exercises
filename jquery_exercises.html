@@ -14,17 +14,28 @@
             <br>
             <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <br>
-            <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p id="codeup" class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <br>
             <ul id="list">
-                <li class="lis">Item1</li>
+                <li class="lis codeup">Item1</li>
                 <li class="lis">Item2</li>
-                <li class="lis">Item3</li>
+                <li class="lis codeup">Item3</li>
             </ul>
+            <h1>Bye</h1>
         </div>
         <script>
-            let item = $("#main");
-            alert(item[0].innerText);
+            let paras = $("p");
+            let headings = $("h1");
+            let listItems = $("li");
+            listItems.css("font-size", "20px");
+            alert(headings[0].textContent);
+
+            let everything = $("h1, p, li");
+            everything.css("background-color", "blue");
+
+            // $(".codeup").css("border", "1px solid red");
+            // let item = $("#main");
+            // alert(item[0].innerText);
             // $("document").ready(function(){
             //     alert("The DOM has finished loading!")
             // })
