@@ -27,13 +27,24 @@
 // }
 //
 
-
-
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
 
 //make sure the DOM is loaded first
-document.addEventListener("DOMContentLoaded", function() {
-    addListeners();
-});
+$(document).ready(addListeners);
 
-let cardContainers = $(".col-md-3");
+function addListeners() {
+    let ducky = "images/jazz-music-rubber-duck.jpg";
+    let question = "images/question.png";
+    let cardContainers = $(".col-md-3");
+    let cardImage = $(".card-img-top");
+
+    function hoverIn(e) {
+        $(this).find(cardImage).attr("src", ducky);
+    }
+    function hoverOut(e) {
+        $(this).find(cardImage).attr("src", question);
+    }
+    cardContainers.hover(hoverIn, hoverOut);
+}
+
 
