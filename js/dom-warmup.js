@@ -9,7 +9,6 @@
 
     function myFunction() {
         let newDiv = document.createElement("div");
-        // newDiv.setAttribute("class", "col-12");
         let newGif = document.createElement("img");
         newGif.setAttribute("src", "images/braveheart.webp")
         newDiv.append(newGif);
@@ -17,7 +16,4 @@
         container.append(newDiv);
         button[0].removeEventListener("click", myFunction);
     }
-
-
-
 })()
