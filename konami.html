@@ -5,23 +5,38 @@
     </head>
     <body>
         <h1>Konami Code</h1>
-
+        <audio src="images/Come%20get%20some.mp3" id="duke"></audio>
         <script src="js/jquery-2.2.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
         <script>
             "use strict";
 
             let userKeyPresses = "";
+            let body = $("body");
 
-            $(document).keyup(function(event){
+            $(document).keyup(function (event) {
                 console.log(event.keyCode);
                 userKeyPresses += event.keyCode;
                 console.log(userKeyPresses);
                 if (userKeyPresses == "3838404037393739666513") {
-
-                    $("body").css("background-color", "blue");
-                    alert("YOU HAVE ADDED 30 LIVES!!")
+                    body.append("<div class='container d-flex justify-content-center'><p style='font-size: 100px; color: #032563FF; text-align: center'>30 Lives, WHOOP!</p></div>")
+                    body.append(`<div id="dialog-message" class="border">
+                                    <p style="font-size: 40px">
+                                        YOU HAVE ADDED 30 LIVES!!
+                                    </p>
+                                </div>`)
+                    body.css({
+                        "background-image": "url('images/522616.jpg')",
+                        "background-repeat": "no-repeat",
+                        "background-size": "cover"
+                    });
+                    $( function() {
+                        $( "#dialog-message" ).dialog();
+                    } );
+                    $("audio#duke")[0].play();
                 }
             });
         </script>
+
     </body>
 </html>
