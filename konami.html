@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Konami Code</title>
+    </head>
+    <body>
+        <h1>Konami Code</h1>
+
+        <script src="js/jquery-2.2.4.js"></script>
+        <script>
+            "use strict";
+
+            let userKeyPresses = "";
+
+            $(document).keyup(function(event){
+                console.log(event.keyCode);
+                userKeyPresses += event.keyCode;
+                console.log(userKeyPresses);
+                if (userKeyPresses == "3838404037393739666513") {
+
+                    $("body").css("background-color", "blue");
+                    alert("YOU HAVE ADDED 30 LIVES!!")
+                }
+            });
+        </script>
+    </body>
+</html>
