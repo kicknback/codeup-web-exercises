@@ -9,7 +9,7 @@
               integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
               crossorigin="anonymous">
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Mate+SC&family=PT+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&display=swap" rel="stylesheet">
         <script src="js/jquery-2.2.4.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
@@ -25,7 +25,15 @@
             }
             .container-fluid {
                 background-image: url("images/caspian-dahlstrom-xXbaTOP31M4-unsplash.jpg");
-                border-bottom: 2px solid #180606FF;
+                border-bottom: 2px solid #686262;
+            }
+            body {
+                font-family: 'Baloo Tammudu 2', cursive;
+                background-image:linear-gradient(#eee, #aaa);
+
+            }
+            button {
+                background-color: #686262FF;
             }
             h1 {
                 color: white;
@@ -33,8 +41,58 @@
             h3 {
                 font-weight: bold;
             }
-            body {
-                font-family: 'PT Sans', sans-serif;
+
+            /*--------- Below styling courtesy of Chris Smith from codepen.io -----------*/
+
+            img {
+                border:solid 2px;
+                border-bottom-color:#ffe;
+                border-left-color:#eed;
+                border-right-color:#eed;
+                border-top-color:#ccb;
+                max-height:100%;
+                max-width:100%;
+                /*height: 150px;*/
+                /*width: 75px;*/
+            }
+
+            .frame {
+                background-color:#ddc;
+                border:solid 5vmin #eee;
+                border-bottom-color:#fff;
+                border-left-color:#eee;
+                border-radius:2px;
+                border-right-color:#eee;
+                border-top-color:#ddd;
+                box-shadow:0 0 5px 0 rgba(0,0,0,.25) inset, 0 5px 10px 5px rgba(0,0,0,.25);
+                box-sizing:border-box;
+                display:inline-block;
+                /*margin:10vh 10vw;*/
+                /*height:80vh;*/
+                width: 50vh;
+                padding:8vmin;
+                position:relative;
+                text-align:center;
+            ::before {
+                 border-radius:2px;
+                 bottom:-2vmin;
+                 box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
+                 content:"";
+                 left:-2vmin;
+                 position:absolute;
+                 right:-2vmin;
+                 top:-2vmin;
+             }
+            ::after {
+                 border-radius:2px;
+                 bottom:-2.5vmin;
+                 box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
+                 content:"";
+                 left:-2.5vmin;
+                 position:absolute;
+                 right:-2.5vmin;
+                 top:-2.5vmin;
+             }
             }
         </style>
     </head>
@@ -96,15 +154,17 @@
                     it.
                 </dd>
             </dl>
-            <button id="toggle" type="button" class="my-4 bg-primary rounded px-2">Show items</button>
+            <button id="toggle" type="button" class="my-4 rounded p-2">Show facts</button>
             <br>
-            <h3 id="everglades" class="mt-2">Everglades</h3>
+            <h3 id="everglades" class="mt-4">Everglades</h3>
+            <div class="container">
             <ul class="fact-list">
                 <li>One of the largest wetlands in the world — but used to be much larger</li>
                 <li>The largest remaining subtropical wilderness left in North America</li>
                 <li>Composed of the largest contiguous stand of protected mangroves in the Northern Hemisphere</li>
                 <li>Home to unique, rare and endangered species</li>
             </ul>
+            </div>
             <br>
             <h3 id="denali">Denali</h3>
             <ul class="fact-list">
@@ -122,8 +182,17 @@
                 <li>Annual visitation: ~ 500,000. Since 1924, the park has had over 44,000,000 visitors</li>
             </ul>
             <br>
-            <button id="park-button" type="button" class="my-4 bg-primary rounded px-2">Make Yellow</button>
-
+            <button id="park-button" type="button" class="my-4 rounded p-2">Make Yellow</button>
+            <div class="row my-4">
+                <div class="col frame"><img src="images/green_nature.jpeg" alt=""></div>
+                <div class="col frame"><img src="images/forest_swing.jpeg" alt=""></div>
+                <div class="col frame"><img src="images/autumnleaves.jpg" alt=""></div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center" id="left"><button type="button" class="my-4 rounded p-2 swap">Swap</button></div>
+                <div class="col d-flex justify-content-center" id="center"><button type="button" class="my-4 rounded p-2 swap">Swap</button></div>
+                <div class="col d-flex justify-content-center" id="right"><button type="button" class="my-4 rounded p-2 swap">Swap</button></div>
+            </div>
         </div>
         <script>
             let dts = $("dt");
@@ -132,12 +201,12 @@
             $("dd").addClass("mb-3");
 
             button.click(function(){
-                if (button.text() === "Show items") {
+                if (button.text() === "Show facts") {
                     $("dd").toggleClass("invisible");
-                    button.text("Hide items");
+                    button.text("Hide facts");
                 } else {
                     $("dd").toggleClass("invisible");
-                    button.text("Show items");
+                    button.text("Show facts");
                 }
             })
             dts.click(function(){
@@ -154,7 +223,9 @@
             $("h3").click(function(){
                 $(this).next().children().css("font-weight", "bold");
             })
-
+            $("li").click(function(){
+                $(this).parent().children().first().css("color", "blue");
+            })
         </script>
     </body>
 </html>
