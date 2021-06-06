@@ -73,7 +73,7 @@
                 padding:8vmin;
                 position:relative;
                 text-align:center;
-            ::before {
+            &:before {
                  border-radius:2px;
                  bottom:-2vmin;
                  box-shadow:0 2px 5px 0 rgba(0,0,0,.25) inset;
@@ -83,7 +83,7 @@
                  right:-2vmin;
                  top:-2vmin;
              }
-            ::after {
+            &:after {
                  border-radius:2px;
                  bottom:-2.5vmin;
                  box-shadow: 0 2px 5px 0 rgba(0,0,0,.25);
@@ -235,10 +235,6 @@
             })
 
             swapButtons.click(function(){
-                // let currentLeftImage = $("#left-image").children().attr("src");
-                // let currentCenterImage = $("#center-image").children().attr("src");
-                let currentRightImage = $("#right-image").children().attr("src");
-
                 if ($(this).parent().attr("id") === "left") {
                     console.log($(this).parent().attr("id"));
                     let currentLeftImage = $("#left-image").children().attr("src");
@@ -251,6 +247,19 @@
                     let currentCenterImage = $("#center-image").children().attr("src");
                     $("#right-image").children().attr("src", currentCenterImage);
                     $("#center-image").children().attr("src", currentRightImage);
+                } else if ($(this).parent().attr("id") === "center") {
+                    console.log($(this).parent().attr("id"));
+                    let currentLeftImage = $("#left-image").children().attr("src");
+                    let currentCenterImage = $("#center-image").children().attr("src");
+                    let currentRightImage = $("#right-image").children().attr("src");
+
+                    if (Math.random() < .5) {
+                        $("#left-image").children().attr("src", currentCenterImage);
+                        $("#center-image").children().attr("src", currentLeftImage);
+                    } else {
+                        $("#right-image").children().attr("src", currentCenterImage);
+                        $("#center-image").children().attr("src", currentRightImage);
+                    }
                 }
             })
         </script>
