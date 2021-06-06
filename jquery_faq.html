@@ -30,7 +30,10 @@
             h1 {
                 color: white;
             }
-            h1, dd, dt {
+            h3 {
+                font-weight: bold;
+            }
+            body {
                 font-family: 'PT Sans', sans-serif;
             }
         </style>
@@ -95,13 +98,32 @@
             </dl>
             <button id="toggle" type="button" class="my-4 bg-primary rounded px-2">Show items</button>
             <br>
-            <h3 id="everglades">Everglades</h3>
+            <h3 id="everglades" class="mt-2">Everglades</h3>
             <ul>
                 <li>One of the largest wetlands in the world — but used to be much larger</li>
                 <li>The largest remaining subtropical wilderness left in North America</li>
                 <li>Composed of the largest contiguous stand of protected mangroves in the Northern Hemisphere</li>
                 <li>Home to unique, rare and endangered species</li>
             </ul>
+            <br>
+            <h3 id="denali">Denali</h3>
+            <ul>
+                <li>Denali is a true wilderness with only one road bisecting the park</li>
+                <li>Visitors often come to Denali to see the big five of wildlife</li>
+                <li>Mountaineering is a favorite activity at this national park</li>
+                <li>Denali has a rich history and remains an important place for Alaska Natives</li>
+            </ul>
+            <br>
+            <h3 id="carlsbadCaverns">Carlsbad Caverns</h3>
+            <ul>
+                <li>Size: 46,766 acres (18,925 hectares), including over 33,000 acres (13,354 hectares) designated wilderness</li>
+                <li>Elevation: Ranges from 3,596 feet to 6,368 feet (1,036 m to 1,941 m) above sea level. The visitor center is at 4,406 feet (1,343 m)</li>
+                <li>120 caves known at this time: This number will change as exploration continues</li>
+                <li>Annual visitation: ~ 500,000. Since 1924, the park has had over 44,000,000 visitors</li>
+            </ul>
+            <br>
+            <button id="park button" type="button" class="my-4 bg-primary rounded px-2">Make Yellow</button>
+
         </div>
         <script>
             let dts = $("dt");
