@@ -184,9 +184,9 @@
             <br>
             <button id="park-button" type="button" class="my-4 rounded p-2">Make Yellow</button>
             <div class="row my-4">
-                <div class="col frame"><img src="images/green_nature.jpeg" alt=""></div>
-                <div class="col frame"><img src="images/forest_swing.jpeg" alt=""></div>
-                <div class="col frame"><img src="images/autumnleaves.jpg" alt=""></div>
+                <div class="col frame mx-1" id="left-image"><img src="images/green_nature.jpeg" alt=""></div>
+                <div class="col frame mx-1" id="center-image"><img src="images/forest_swing.jpeg" alt=""></div>
+                <div class="col frame mx-1" id="right-image"><img src="images/autumnleaves.jpg" alt=""></div>
             </div>
             <div class="row">
                 <div class="col d-flex justify-content-center" id="left"><button type="button" class="my-4 rounded p-2 swap">Swap</button></div>
@@ -215,16 +215,43 @@
 
             // ------------- Code for traversing exercise ----------------
 
+            let swapButtons = $(".swap");
+            const greenImg = "images/green_nature.jpeg";
+            const forestImg = "images/forest_swing.jpeg";
+            const autumnImg = "images/autumnleaves.jpg";
+
             $("#park-button").click(function(){
                 $("ul").each(function(){
                     $(this).children().last().css("background-color", "yellow");
                 })
             })
+
             $("h3").click(function(){
                 $(this).next().children().css("font-weight", "bold");
             })
+
             $("li").click(function(){
                 $(this).parent().children().first().css("color", "blue");
+            })
+
+            swapButtons.click(function(){
+                // let currentLeftImage = $("#left-image").children().attr("src");
+                // let currentCenterImage = $("#center-image").children().attr("src");
+                let currentRightImage = $("#right-image").children().attr("src");
+
+                if ($(this).parent().attr("id") === "left") {
+                    console.log($(this).parent().attr("id"));
+                    let currentLeftImage = $("#left-image").children().attr("src");
+                    let currentCenterImage = $("#center-image").children().attr("src");
+                    $("#left-image").children().attr("src", currentCenterImage);
+                    $("#center-image").children().attr("src", currentLeftImage);
+                } else if ($(this).parent().attr("id") === "right") {
+                    console.log($(this).parent().attr("id"));
+                    let currentRightImage = $("#right-image").children().attr("src");
+                    let currentCenterImage = $("#center-image").children().attr("src");
+                    $("#right-image").children().attr("src", currentCenterImage);
+                    $("#center-image").children().attr("src", currentRightImage);
+                }
             })
         </script>
     </body>
