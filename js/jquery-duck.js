@@ -82,7 +82,9 @@
 //  -> When the user hovers out, the data-attribute value should be replaced with the original text ("Card")
 
 let hoverIn = () => {
-    $(this).find(".card-title").text($(this).attr("data-attr"));
+    // $(this).find(".card-title").text($(this).attr("data-attr"));
+    console.log($(this).attr("data-attr"));
+    console.log($(this).find(".card-title").text());
 }
 
 let hoverOut = () => {
@@ -101,5 +103,20 @@ $(".list-group-item").click(function(){
     $(this).toggleClass("bg-danger");
 })
 
+// TODO: Change up the submit button event
+//  -> Add a new input with an id of #redirect-url
+//  -> Remove the old click events from #submitBtn
+//  -> When the user clicks #submitBtn, redirect the page to the value of #redirect-url
+//  -> HINT: You can either add a new input or change the id of an existing input element to #redirect-url to save time
 
+$("#submitBtn").click(function(){
+    let newSite = $("#redirect-url").val();
+    window.location.assign(newSite);
+    console.log(newSite);
+})
 
+// TODO: After a 2 second delay (BOM), when the user loads the page, change #main-title to a value of your choosing (change text, background color, what have you)!
+
+setTimeout(function(){
+    $("#main-title").css({"background-color": "yellow", "color": "black"});
+}, 2000)
