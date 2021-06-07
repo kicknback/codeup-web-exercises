@@ -81,13 +81,12 @@
 //  -> Now, when a user hovers over one of the .col-md-3 containers, you should replace the text inside #card-title with the data-attribute value
 //  -> When the user hovers out, the data-attribute value should be replaced with the original text ("Card")
 
-let hoverIn = () => {
-    // $(this).find(".card-title").text($(this).attr("data-attr"));
-    console.log($(this).attr("data-attr"));
-    console.log($(this).find(".card-title").text());
+function hoverIn() {
+    $(this).find(".card-title").text($(this).attr("data-attribute"));
+    console.log($(this).attr("data-attribute"));
 }
 
-let hoverOut = () => {
+function hoverOut() {
     $(this).find(".card-title").text("Card");
 }
 
