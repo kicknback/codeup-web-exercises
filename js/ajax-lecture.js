@@ -18,15 +18,35 @@
     //     }]
     // }
 
-    console.log($.ajax("https://jsonplaceholder.typicode.com/comments"));
+    // console.log($.ajax("https://jsonplaceholder.typicode.com/comments"));
+    //
+    // $.ajax("https://jsonplaceholder.typicode.com/comments", {
+    //     type: "POST",
+    //     data: {
+    //         title: "my trip to Antartica",
+    //         article: "lorem ipsum blah blah blah."
+    //     }
+    // })
 
-    $.ajax("https://jsonplaceholder.typicode.com/comments", {
+    // TODO: using https://jsonplaceholder.typicode.com/ make an ajax request to the comments endpoint and console it.
+
+    // console.log($.ajax("https://jsonplaceholder.typicode.com/comments"));
+
+    // TODO: make a POST request to the '/posts' endpoint, make sure to include any data required for that post to be made successfully
+
+    console.log($.ajax({
+        url: "https://jsonplaceholder.typicode.com/posts",
         type: "POST",
         data: {
-            title: "my trip to Antartica",
-            article: "lorem ipsum blah blah blah."
+            "userId": 11,
+            "id": 101,
+            "title": "blaaaaaaah",
+            "body": "cupiditate quo est a modi nesciunt soluta\nipsa voluptas error itaque dicta in\nautem qui minus magnam et distinctio eum\naccusamus ratione error aut"
         }
-    })
+    }));
 
+    // TODO: what status do you get back when making a GET request to: https://jsonplaceholder.typicode.com/cmments
+
+    console.log($.ajax("https://jsonplaceholder.typicode.com/cmments"));
 
 })()
