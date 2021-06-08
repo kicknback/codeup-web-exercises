@@ -47,6 +47,8 @@
 
     // TODO: what status do you get back when making a GET request to: https://jsonplaceholder.typicode.com/cmments
 
-    console.log($.ajax("https://jsonplaceholder.typicode.com/cmments"));
+    console.log($.ajax("https://jsonplaceholder.typicode.com/cmments")); // 404 error comes back due to misspelling
+
+
 
 })()
