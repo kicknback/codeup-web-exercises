@@ -18,6 +18,15 @@
     //     }]
     // }
 
+    console.log($.ajax("https://jsonplaceholder.typicode.com/comments"));
+
+    $.ajax("https://jsonplaceholder.typicode.com/comments", {
+        type: "POST",
+        data: {
+            title: "my trip to Antartica",
+            article: "lorem ipsum blah blah blah."
+        }
+    })
 
 
 })()
