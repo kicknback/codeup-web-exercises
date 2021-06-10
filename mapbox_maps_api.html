@@ -26,14 +26,57 @@
                 container: "map",
                 style: "mapbox://styles/mapbox/dark-v10",
                 center: [-97.76443791775463, 30.27401521055017],
-                zoom: 12
+                zoom: 11
             });
+
+            // let marker = setMarker([-97.76443791775463, 30.27401521055017]);
+            // addMapMarker();
+            // createPopup("Sushi Zushi");
+
+
 
             function setMarker(point) {
                 return new mapboxgl.Marker().setLngLat(point).addTo(map);
 
             }
-            let sushiMarker = setMarker([-97.76443791775463, 30.27401521055017]);
+
+            // click event to add arbitrary marker on the map
+            // map.on("click", function (e){
+            //     if (!setMarker(e.lngLat)) {
+            //         setMarker(e.lngLat);
+            //     }
+            //
+            //     console.log(e.lngLat);
+            // })
+
+            function createPopup(popupDetails) {
+                let popup = new mapboxgl.Popup().setHTML(`<p>${popupDetails}</p>`).addTo(map);
+                marker.setPopup(popup);
+            }
+
+            let my3Favs = [
+                {
+                    name: "Sushi Zushi",
+                    location: [-97.76443791775463, 30.27401521055017],
+                    favdish: "Cosimo roll"
+                },
+                {
+                    name: "Home Slice",
+                    location: [-97.74960004331649, 30.249419633050472],
+                    favdish: "Pepperoni Pizza"
+                },
+                {
+                    name: "Habana Restaurant",
+                    location: [-97.75732049929131, 30.235009363762266],
+                    favdish: "Cuban sandwich"
+                }
+            ];
+
+            my3Favs.forEach(function (place, index){
+                let currMarker = setMarker(place.location);
+                currMarker.setLngLat(place.location).setPopup(new mapboxgl.Popup().setHTML(`<p>${place.name}<br>My favorite dish here is the ${place.favdish}</p>`));
+            })
+
 
         </script>
     </body>
