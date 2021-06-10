@@ -29,12 +29,12 @@
             </div>
         </div>
 
+        <script src="js/keys.js"></script>
         <script src="js/jquery-2.2.4.js"></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.0/mapbox-gl.js"></script>
         <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js"></script>
         <script>
-            const mapboxToken = "pk.eyJ1Ijoia2lja25iYWNrIiwiYSI6ImNrcHEzcXpweTAyYzEycHBvdDBiam1zMjgifQ.XZuE743VXfrySRN-Cyq1Zg";
-            mapboxgl.accessToken = mapboxToken;
+            mapboxgl.accessToken = MAPBOX_TOKEN;
 
             var map = new mapboxgl.Map({
                 container: "map",

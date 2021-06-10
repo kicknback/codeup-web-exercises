@@ -1,6 +1,5 @@
-const mapboxToken = "pk.eyJ1Ijoia2lja25iYWNrIiwiYSI6ImNrcHBuOWEwcjJveTIydXBlYzI0M2ttYjcifQ.XQ3-Mc4BInwSCGwala81DA"
 
-mapboxgl.accessToken = mapboxToken;
+mapboxgl.accessToken = MAPBOX_TOKEN;
 
 var map = new mapboxgl.Map({
     container: "map",
