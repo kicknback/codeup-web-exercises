@@ -29,6 +29,12 @@
                 zoom: 12
             });
 
+            function setMarker(point) {
+                return new mapboxgl.Marker().setLngLat(point).addTo(map);
+
+            }
+            let sushiMarker = setMarker([-97.76443791775463, 30.27401521055017]);
+
         </script>
     </body>
 </html>
