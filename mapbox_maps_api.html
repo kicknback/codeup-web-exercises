@@ -14,18 +14,25 @@
               crossorigin="anonymous">
 
         <title>Mapbox maps api</title>
+        <style>
+            .invisible {
+                visibility: hidden;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
-            <div id="map" class="mt-5" style="height: 500px; width: 950px"></div>
+            <div id="map" class="mt-5" style="height: 500px; width: 100%"></div>
 
-            <div class="mt-2">
+            <div class="mt-3 d-flex justify-content-between">
                 <select name="zoom-input" id="zoom-input">
                     <option value="11">Normal</option>
                     <option value="5">5</option>
                     <option value="15">15</option>
                     <option value="20">20</option>
                 </select>
+
+                <button class="rounded" type="button" id="hide-show">Hide Markers</button>
             </div>
         </div>
 
@@ -68,7 +75,9 @@
                 marker.setPopup(popup);
             }
             function setMarker(point) {
-                return new mapboxgl.Marker().setLngLat(point).addTo(map);
+                return new mapboxgl.Marker({
+                    color: '#F84C4C'
+                }).setLngLat(point).addTo(map);
 
             }
             function setGeoCoder() {
@@ -85,6 +94,7 @@
                     createPopup(e.result.place_name, setMarker(e.result.center));
                 })
             }
+
 
             let my3Favs = [
                 {
@@ -107,12 +117,28 @@
             my3Favs.forEach(function (place, index) {
                 let currMarker = setMarker(place.location);
                 currMarker.setLngLat(place.location).setPopup(new mapboxgl.Popup().setHTML(`<p>${place.name}<br>My favorite dish here is the ${place.favdish}</p>`));
+                $("svg").empty();
+                $(".mapboxgl-marker").css({
+                    'background-image': 'url("icons/restaurant-15.svg")',
+                    'background-repeat': 'no-repeat'
+                })
             })
 
             $("#zoom-input").change(function(){
-                // console.log($("#zoom-input option:selected").val());
-                // console.log($("zoom-input").find(":selected").attr("value"));
                 map.setZoom($("#zoom-input option:selected").val());
+            })
+            $("#hide-show").click(function (){
+                let markers = $(".mapboxgl-marker");
+                let button = $("#hide-show");
+                console.log(markers);
+                console.log(button.text());
+                if (button.text() === "Hide Markers") {
+                    markers.toggleClass("invisible");
+                    button.text("Show Markers");
+                } else {
+                    markers.toggleClass("invisible");
+                    button.text("Hide Markers");
+                }
             })
 
 
