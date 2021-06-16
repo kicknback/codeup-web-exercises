@@ -7,3 +7,17 @@ fetch("https://dog.ceo/api/breeds/image/random").then(message => {
 
 })
     .catch(err => console.log(`There was an error of: ${err}`));
+
+// create a second GET request to return the blog post with an id of 11 and display that blog post on the dom.
+fetch('https://jsonplaceholder.typicode.com/posts') // make a request - GET
+    .then(response => response.json())
+    .then(data =>{
+        console.log(data); //
+        console.log(data[10].id);
+        $("#blog-title").append(data[10].title);
+        $("#blog-post").append(data[10].body);
+    }) // we have the data in json format, now we can manipulate it
+    .catch(error => {
+        console.log(error);
+        console.error(error);
+    });
