@@ -12,11 +12,27 @@ fetch("https://dog.ceo/api/breeds/image/random").then(message => {
 fetch('https://jsonplaceholder.typicode.com/posts') // make a request - GET
     .then(response => response.json())
     .then(data =>{
-        console.log(data); //
-        console.log(data[10].id);
+        // console.log(data);
+        // console.log(data[10].id);
         $("#blog-title").append(data[10].title);
         $("#blog-post").append(data[10].body);
-    }) // we have the data in json format, now we can manipulate it
+        return data[10].id;
+    }).then(data => {
+    fetch(`https://jsonplaceholder.typicode.com/comments?postId=${data}`)
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            console.log(data.name);
+            let bucket = $(".container");
+            data.forEach((ele, index) => {
+                bucket.append(`
+                        <p>${data[index].name}</p>
+                        <p>${data[index].body}</p>
+                    `);
+            })
+        })
+    })
+     // we have the data in json format, now we can manipulate it
     .catch(error => {
         console.log(error);
         console.error(error);
