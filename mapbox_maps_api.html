@@ -58,13 +58,13 @@
 
 
             // click event to add arbitrary marker on the map
-            // map.on("click", function (e){
-            //     if (!setMarker(e.lngLat)) {
-            //         setMarker(e.lngLat);
-            //     }
-            //
-            //     console.log(e.lngLat);
-            // })
+            map.on("click", function (e){
+                if (!setMarker(e.lngLat)) {
+                    setMarker(e.lngLat);
+                }
+
+                console.log(e.lngLat);
+            })
 
             let myGeo = setGeoCoder();
             addGeoEvent(myGeo);
